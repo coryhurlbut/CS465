@@ -9,6 +9,10 @@ router
 	.route('/trips')
 	.get(tripsController.tripsList)
 	.post(tripsController.tripsAddTrip); //GET method routes triplist
-router.route('/trips/:tripCode').get(tripsController.tripsFindByCode).put(tripsController.tripsUpdateTrip); //GET method routes tripsFindByCode
+router
+	.route('/trips/:tripCode')
+	.get(tripsController.tripsFindByCode)
+	.put(tripsController.tripsUpdateTrip)
+	.delete(tripsController.tripsDeleteByCode); //GET method routes tripsFindByCode
 
 module.exports = router;
